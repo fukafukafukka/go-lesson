@@ -6,7 +6,8 @@
 .LSOverride
 
 # Icon must end with two \r
-Icon
+Icon
+
 
 # Thumbnails
 ._*
@@ -48,3 +49,9 @@ Temporary Items
 
 # Udemy explain file
 go-fintech.txt
+
+# Secret file
+*.ini
+
+# log file
+*.log
