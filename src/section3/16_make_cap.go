@@ -5,6 +5,8 @@ import "fmt"
 func main() {
 	// makeを使ってスライスを宣言することができる
 	// n := make([]型, 長さ, キャパシティ)
+	// 長さ: 初期化された値がの数。
+	// キャパシティ: メモリに確保されている数
 	n := make([]int, 3, 5)
 	fmt.Printf("len=%d cap=%d value=%v\n", len(n), cap(n), n)
 	fmt.Println("-------------------------------")

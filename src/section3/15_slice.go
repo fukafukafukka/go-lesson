@@ -7,7 +7,10 @@ func main() {
 	n := []int{1, 2, 3, 4, 5, 6}
 	fmt.Println(n)
 	fmt.Println(n[2])
-	fmt.Println(n[2:4])
+	fmt.Println(n[2:4]) // カンマの番号でスライスされると解釈するとわかりやすい。[3 4]
+	fmt.Println(n[:2]) // [1 2]
+	fmt.Println(n[2:]) // [3 4 5 6]
+	fmt.Println(n[:]) // [1 2 4 5 6 ]
 
 	n = append(n, 100, 200, 300, 400)
 	fmt.Println(n)

@@ -24,12 +24,12 @@ func main() {
 	m2["pc"] = 5000
 	fmt.Println(m2)
 
-	// 以下は入れる対象のメモリがないのでエラーになる
 	// var m3 map[string]int
+	// 以下で、エラーになる。理由:初期化されていない(=入れる対象のメモリがない)ため、nilに値を入れようとしてしまっている
 	// m3["pc"] = 5000
 	// fmt.Println(m3)
 
-	// 以下両方ともnilとなることに気を付ける
+	// 以下両方とも初期化されていないので、nilとなっていることに気を付ける
 	var m3 map[string]int
 	if m3 == nil {
 		fmt.Println("Nil")
