@@ -3,7 +3,9 @@ package main
 import "fmt"
 
 func lessonPointer(x *int) {
-	*x = 1
+	fmt.Println(x)  // アドレスが出力される
+	fmt.Println(*x) // アドレスにある値が出力される
+	*x = 1          // アドレスにある値を書き換えている
 }
 
 func main() {
@@ -24,6 +26,8 @@ func main() {
 
 	var num int = 2
 	// numのアドレスをメソッドに渡して、メソッド内でアドレスに対して値を代入する。
-	lessonPointer(&num)
+	lessonPointer(&num) // &num: intの2が入ったアドレス
+	lessonPointer(p)    // p: intの100が入ったnのアドレス
+	lessonPointer(nil)  // メソッド内で、xを出力すると<nil>というアドレスが表示されて、*xを出力すると参照先が無くpanicが起こる
 	fmt.Println(num)
 }

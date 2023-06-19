@@ -1,9 +1,12 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
 
 func getOsName() string {
-	return "default"
+	return "unix"
 }
 
 func main() {
@@ -23,7 +26,18 @@ func main() {
 		fmt.Println("Mac!")
 	case "Windows!":
 		fmt.Println("Windows!")
-	case "default":
-		fmt.Println("default")
+	default:
+		fmt.Println("default", os)
+	}
+
+	// fmt.Println(os) // 上記の書き方の場合、switchの外では参照できない
+
+	t := time.Now()
+	// switchの後に値を宣言しない書き方もある
+	switch {
+	case t.Hour() < 12:
+		fmt.Println(("Morning"))
+	case t.Hour() < 17:
+		fmt.Println(("Afternoon"))
 	}
 }

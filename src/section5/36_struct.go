@@ -8,8 +8,8 @@ import "fmt"
 // S    string
 // }
 
-// 構造体の変数が大文字ならpublicを表す
 type Vertex struct {
+	// 構造体の変数が大文字ならpublicを表す
 	X int
 	Y int
 	S string
